@@ -4,7 +4,7 @@ A simple and practical weather inquiry tool. This app allows users to input the 
 
 ### 🌐 Live Demo  
 
-👉 Check out the app here: [Weather Planner](https://weather-planner-b3cd.onrender.com)
+👉 Check out the app here: [Weather Planner](https://weather-planner-16cr.onrender.com)
 
 ### 💫 Features
 
