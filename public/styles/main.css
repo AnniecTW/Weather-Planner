@@ -8,7 +8,7 @@ body {
   position: relative;
   z-index: 0;
   font-family: "Karla", sans-serif;
-  font-size: 15px;
+  font-size: 17.5px;
 }
 
 body::before {
@@ -233,4 +233,7 @@ p.suggestion {
 #locInput {
   border-radius: 6px;
   border: solid 1px #608bc1;
+  font-size: 17.5px;
+  font-family: "Karla", sans-serif;
+  padding: 6px 10px;
 }
