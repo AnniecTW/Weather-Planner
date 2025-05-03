@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Planner</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Karla&family=Quicksand:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Don’t let the weather ruin your plans—plan it like a pro!</h1>
+      <h2 class="txt">Your personal weather sidekick is here! ☁️☂️☀️</h2>
+      <p>Enter your city 🌍</p>
+      <form action="/" id="form" class="form" method="POST">
+        <label for="locInput">City: </label>
+        <input type="text" id="locInput" name="loc" />
+
+        <button type="submit" class="form-submit">Go</button>
+      </form>
+      <!-- if data.retrived -->
+      <% if (locals.days) { %>
+      <div class="plans">
+        <div class="cards">
+          <% days.forEach((d, i) => { %>
+          <div
+            class="weather-card <%= d.className %> <% if (i >= 5) { %> hidden <% } %>"
+          >
+            <h4><%= d.date %> (<%= d.day %>)</h4>
+            <p>🌡️ <%= d.min %> °C ~ <%= d.max %> °C</p>
+            <p>🌞 UV index: <%= d.uv %></p>
+            <p>🌬️ WS: <%= d.wind %> km/h</p>
+            <p>💧 RH: <%= d.humid %> %</p>
+            <p class="suggestion"><%- d.suggestion %></p>
+          </div>
+          <% }) %>
+        </div>
+
+        <button id="toggleBtn">Show Full 7-day Forecast</button>
+      </div>
+      <% } %> <% if (locals.error) { %>
+      <p>Failed to retrive data: <%= error %></p>
+      <% } %>
+    </div>
+  </body>
+  <script>
+    const btn = document.getElementById("toggleBtn");
+    const txt = document.querySelector(".txt");
+    let expanded = false;
+
+    btn.addEventListener("click", () => {
+      txt.classList.toggle("hidden");
+      const cards = document.querySelectorAll(".weather-card");
+      cards.forEach((card, idx) => {
+        if (idx >= 5) {
+          card.classList.toggle("hidden");
+        }
+      });
+      expanded = !expanded;
+      btn.textContent = expanded
+        ? "Show only 5 days"
+        : "Show Full 7-day Forecast";
+    });
+  </script>
+</html>
