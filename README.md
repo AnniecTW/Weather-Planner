@@ -1,16 +1,16 @@
-## ☀️ Weather Planner - your personal weather sidekick
+## Weather Planner - your personal weather sidekick
 
 A simple and practical weather inquiry tool. This app allows users to input the location to get 7-day weather forecast from the Open-Meteo API.
 
-### 🌐 Live Demo  
+### Live Demo  
 
 👉 Check out the app here: [Weather Planner](https://weather-planner-iqhv.onrender.com)
 
-### 💫 Features
+### Features
 
 📍 Location-based weather search (by city name)<br>📅 7-day forecast including temperature, UV index, wind speed, etc.<br>🎨 Visual indicators using icons and background images to represent weather conditions<br>🧠 Smart suggestions, like reminders to bring an umbrella<br>
 
-### 🚀 Run Locally
+### Run Locally
 
 1. Clone the repo
 
@@ -20,7 +20,7 @@ A simple and practical weather inquiry tool. This app allows users to input the 
 
 4. Visit http://localhost:3000 in your browser<br>
 
-### 🛠 Tech Stack
+### Tech Stack
 
 - HTML/CSS/JavaScript
 
@@ -32,6 +32,6 @@ A simple and practical weather inquiry tool. This app allows users to input the 
 
 - Axios<br>
 
-### 📄 License 
+### License 
 
 MIT 
